@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dashboard-exe/static/css/main.073c9b0a.css",
+    "main.js": "/dashboard-exe/static/js/main.41fe997e.js",
+    "static/media/logo.svg": "/dashboard-exe/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/dashboard-exe/index.html",
+    "main.073c9b0a.css.map": "/dashboard-exe/static/css/main.073c9b0a.css.map",
+    "main.41fe997e.js.map": "/dashboard-exe/static/js/main.41fe997e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.41fe997e.js"
+  ]
+}
