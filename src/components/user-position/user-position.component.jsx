@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 
 import CustomButton from '../custom-button/custom-button.component.jsx';
 
-import { removeUser, toggleDeleteHidden } from '../../redux/user/user.actions.js';
+import { removeUser, toggleDeleteHidden, userToDelete } from '../../redux/user/user.actions.js';
 
 import './user-position.styles.scss';
 
-const UserPosition = ({ user, removeUser, toggleDeleteHidden }) => {
+const UserPosition = ({ user, removeUser, toggleDeleteHidden, userToDelete }) => {
   
   const { id, name, username, email, address } = user;
   
@@ -28,6 +28,7 @@ const UserPosition = ({ user, removeUser, toggleDeleteHidden }) => {
             deleteButton
             onClick={() => {
               toggleDeleteHidden();
+              userToDelete(user);
             }}
             user={user}
           >
@@ -41,6 +42,7 @@ const UserPosition = ({ user, removeUser, toggleDeleteHidden }) => {
 
 const mapDispatchToProps = (dispatch) => ({
   removeUser: user => dispatch(removeUser(user)),
+  userToDelete: (user) => dispatch(userToDelete(user)),
   toggleDeleteHidden: () => dispatch(toggleDeleteHidden())
 }); 
 

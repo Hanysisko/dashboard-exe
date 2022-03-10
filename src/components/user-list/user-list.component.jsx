@@ -26,7 +26,9 @@ const UserList = ({ users }) => (
         </div>
       )
       :
-      ( <span className=''>NO USERS</span> )
+      ( <div className='no-users-message'>
+          <span className='no-users-message-title'>NO USERS</span>
+        </div> )
     }
   </div>
 );

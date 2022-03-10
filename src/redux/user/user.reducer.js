@@ -3,7 +3,8 @@ import { UserActionTypes } from './user.types.js';
 const INITIAL_STATE = {
   usersData: [],
   hiddenDelete: true,
-  userIdToDelete: ''
+  userToDeleteData: [],
+  newUser: [],
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -24,14 +25,26 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         usersData: state.usersData.filter(
-          userPosition => userPosition.id !== action.payload.id
+          userPosition => userPosition.id !== state.userToDeleteData.id
         )
       }
 
     case UserActionTypes.USER_TO_DELETE:
       return{
         ...state,
+        userToDeleteData: action.payload,
+    }
+
+    case UserActionTypes.TOGGLE_DELETE_HIDDEN:
+      return{
+        ...state,
         hiddenDelete: !state.hiddenDelete,
+    }
+
+    case UserActionTypes.ADD_USER:
+      return{
+        ...state,
+        newUser: action.payload
     }
 
 

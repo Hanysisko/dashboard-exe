@@ -15,10 +15,20 @@ export const fetchDataSuccess = (item) => ({
 });
 
 export const toggleDeleteHidden = () => ({
-  type: UserActionTypes.USER_TO_DELETE
+  type: UserActionTypes.TOGGLE_DELETE_HIDDEN
+});
+
+export const userToDelete = (item) => ({
+  type: UserActionTypes.USER_TO_DELETE,
+  payload: item
 });
 
 export const removeUser = (item) => ({
   type: UserActionTypes.REMOVE_USER,
+  payload: item
+});
+
+export const addUser = (item) => ({
+  type: UserActionTypes.ADD_USER,
   payload: item
 });

@@ -19,6 +19,18 @@
     }
   }
 
+  .no-users-message {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+
+    .no-users-message-title {
+      margin: auto;
+      height: 1em;
+    }
+  }
+
 }
 
 

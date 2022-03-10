@@ -1,11 +1,11 @@
 .delete-popup {
-  position:absolute;
+  position: fixed;
   top: 0%;
   right: 0%;
   z-index: 5;
 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   font-weight: bold;
   min-width: 30%;
@@ -28,26 +28,36 @@
 
   .content {
     background-color: white;
-    height: 90px;
+    width: 400px;
+    height: 200px;
     padding: 0 25px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
     border-radius: 5px;
     position: absolute;
 
     .title {
-      margin-top: 0px;
-      margin-bottom: 6px;
+      height: 20%;
+      padding: auto;
       font-size: 22px;
       color: #4a4a4a;
     }
 
     .subtitle {
-      font-weight: lighter;
+      height: 30%;
+      padding: auto;
       font-size: 16px;
+      
+    }
+
+    .button-box {
+      height: 25%;
+      padding: auto;
+      display: flex;
+      flex-direction: row;
     }
   }
 }

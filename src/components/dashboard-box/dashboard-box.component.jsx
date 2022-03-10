@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import UserList from '../user-list/user-list.component.jsx'
-import AddUser from '../add-user/add-user.component.jsx';
+import AddUserForm from '../add-user/add-user.component.jsx';
 import CustomButton from '../custom-button/custom-button.component.jsx';
 import DeletePopup from '../delete-popup/delete-popup.component.jsx';
 
 import './dashboard-box.styles.scss';
 
-const DashboardBox = ({ userList, title, history, hiddenDelete }) => (
+const DashboardBox = ({ userList, title, history, hiddenDelete, submit }) => (
   <div className='dashboard-box'>
       <div className='title'>
         <div className='title-text'>{title}</div>
@@ -39,7 +39,7 @@ const DashboardBox = ({ userList, title, history, hiddenDelete }) => (
           (
             <UserList/>
           ) : (
-            <AddUser/>
+            <AddUserForm/>
           )
         }
 
