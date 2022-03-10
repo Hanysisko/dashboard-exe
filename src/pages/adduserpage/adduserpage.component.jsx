@@ -7,9 +7,7 @@ import './adduserpage.styles.scss';
 const AddUserPage = () => (
 
   <div>
-    <DashboardBox>
-      
-    </DashboardBox>
+    <DashboardBox title="Form"/>
   </div>
 
 );

@@ -2,12 +2,15 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #666;
 
   .user-list-footer-element {
     width: 14%;
     text-align: center;
     padding: 20px 0px;
+    margin: auto;
   }
+
 }
 
 

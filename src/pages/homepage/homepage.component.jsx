@@ -7,9 +7,8 @@ import './homepage.styles.scss';
 const HomePage = () => (
 
   <div>
-    <DashboardBox>
+    <DashboardBox title="User name" userList/>
       
-    </DashboardBox>
   </div>
 
 );

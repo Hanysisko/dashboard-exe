@@ -2,18 +2,30 @@
   border: 1px solid #999;
   border-radius: 10px;
   box-shadow: 2px 2px 2px #666;
+  
 
-  .border-bottom{
-    border-bottom: 1px solid #666;
-  }
 
   .title{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 10px;
+    height: 3em;
+
+    .title-text {
+      height: 1.2em;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 5%;
+    }
 
   }
+
+
+  .border-bottom{
+    border-bottom: 1px solid #666;
+  }
+
 }
 
 
