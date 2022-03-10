@@ -6,7 +6,8 @@ const CustomButton = ({
   children, 
   addNewButton, 
   editButton,
-  deleteButton, 
+  deleteButton,
+  cancelButton, 
   ...otherButtonProps 
 }) => (
   <button 
@@ -14,6 +15,7 @@ const CustomButton = ({
       ${addNewButton ? 'add-new': ''}
       ${editButton ? 'edit': ''}
       ${deleteButton ? 'delete': ''}
+      ${cancelButton ? 'cancel': ''}
       custom-button
     `} 
     {...otherButtonProps}>

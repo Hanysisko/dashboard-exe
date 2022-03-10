@@ -1,7 +1,9 @@
 import { UserActionTypes } from './user.types.js';
 
 const INITIAL_STATE = {
-  usersData: []
+  usersData: [],
+  hiddenDelete: true,
+  userIdToDelete: ''
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -17,6 +19,20 @@ const userReducer = (state = INITIAL_STATE, action) => {
         ...state,
         usersData: action.payload,
       }
+
+    case UserActionTypes.REMOVE_USER:
+      return {
+        ...state,
+        usersData: state.usersData.filter(
+          userPosition => userPosition.id !== action.payload.id
+        )
+      }
+
+    case UserActionTypes.USER_TO_DELETE:
+      return{
+        ...state,
+        hiddenDelete: !state.hiddenDelete,
+    }
 
 
     default:

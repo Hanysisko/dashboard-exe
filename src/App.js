@@ -7,6 +7,7 @@ import './App.css';
 
 import HomePage from './pages/homepage/homepage.component.jsx';
 import AddUserPage from './pages/adduserpage/adduserpage.component.jsx';
+import DeletePopup from './components/delete-popup/delete-popup.component';
 
 import { fetchUsers } from '../src/redux/user/fetchUserData.js';
 
@@ -33,7 +34,6 @@ class App extends Component {
 
         </Switch>
       </div>
-
     );
   }
 }

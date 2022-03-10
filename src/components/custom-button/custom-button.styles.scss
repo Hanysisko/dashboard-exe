@@ -53,4 +53,15 @@
       color: white;
     }
   }
+
+  &.cancel {
+    background-color: #444;
+    border-color: white;
+    color: white;
+
+    &:hover {
+      background-color: #222;
+      color: white;
+    }
+  }
 }
