@@ -1,4 +1,5 @@
 import React from 'react';
+import UserList from '../user-list/user-list.component.jsx'
 
 import './dashboard-box.styles.scss';
 
@@ -10,6 +11,8 @@ const DashboardBox = () => (
       <div>Custom Button</div>
     </div>
     <div className='border-bottom'></div>
+
+    <UserList/>
 
   </div>
 );

@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
+// import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 
 import HomePage from './pages/homepage/homepage.component.jsx';
 import AddUserPage from './pages/adduserpage/adduserpage.component.jsx';
 
+import { fetchUsers } from '../src/redux/user/fetchUserData.js';
+
 class App extends Component {
 
-  constructor() {
-    super();
-
-    this.state = {
-      users: []
-    };
-
-  }
-
   componentDidMount() {
-    fetch('https://my-json-server.typicode.com/karolkproexe/jsonplaceholderdb/data')
-    .then(response => response.json())
-    .then(users => this.setState({ users:users }))
+    this.props.dispatch(fetchUsers());
   }
  
   render() {
@@ -28,6 +21,7 @@ class App extends Component {
       <div>
 
         <h1>Dashboard</h1>
+        <div></div>
 
         <Switch>
 
@@ -42,9 +36,10 @@ class App extends Component {
 
     );
   }
-
 }
 
+const mapStateToProps = state => ({
+  users: state.users.usersData
+});
 
-
-export default App;
+export default connect(mapStateToProps)(App);

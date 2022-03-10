@@ -1,20 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './user-list.styles.scss';
 
-const UserList = () => (
-  <div className='dashboard-box'>
+const UserList = ({}) => (
+  <div>
     
-    <div className='title'>
-      <div>User List</div>
-      <div>Custom Button</div>
-    </div>
-    <div className='border-bottom'></div>
-
-    <div>User List</div>
-
   </div>
 );
 
+const mapStateToProps = state => ({
+  users: state.users.usersData
+});
 
-export default UserList;
+export default connect(mapStateToProps)(UserList);
