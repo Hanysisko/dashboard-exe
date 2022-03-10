@@ -3,9 +3,31 @@ import { connect } from 'react-redux';
 
 import './user-list.styles.scss';
 
-const UserList = ({}) => (
-  <div>
-    
+import UserPosition from '../user-position/user-position.component.jsx'
+
+const UserList = ({ users }) => (
+  <div className='user-list-box'>
+    <div className='user-list-footer'>
+      <div className='user-list-footer-element'>ID</div>
+      <div className='user-list-footer-element'>Name</div>
+      <div className='user-list-footer-element'>Username</div>
+      <div className='user-list-footer-element'>Email</div>
+      <div className='user-list-footer-element'>City</div>
+      <div className='user-list-footer-element'>Edit</div>
+      <div className='user-list-footer-element'>Delete</div>
+    </div>
+    {
+      users.length ? 
+      (
+        <div className=''>
+          {users.map((user) => (
+            <UserPosition key={user.id} user={user}/>
+          ))}
+        </div>
+      )
+      :
+      ( <span className=''>NO USERS</span> )
+    }
   </div>
 );
 

@@ -1,20 +1,23 @@
-.dashboard-box {
-  border: 1px solid #666;
-  border-radius: 10px;
+.user-list-box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 1px solid #999;
   box-shadow: 2px 2px 2px #666;
-  min-height: 50vh;
 
-  .border-bottom{
-    border-bottom: 1px solid #666;
-  }
-
-  .title{
+  .user-list-footer {
+    margin: 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin: 10px;
+    background-color: #ddd;
 
+    .user-list-footer-element {
+      width: 14%;
+      text-align: center;
+      padding: 20px 0px;
+    }
   }
+
 }
 
 
