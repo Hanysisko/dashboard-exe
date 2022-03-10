@@ -9,7 +9,7 @@ import DeletePopup from '../delete-popup/delete-popup.component.jsx';
 
 import './dashboard-box.styles.scss';
 
-const DashboardBox = ({ userList, title, history, hiddenDelete, submit }) => (
+const DashboardBox = ({ userList, title, history, hiddenDelete }) => (
   <div className='dashboard-box'>
       <div className='title'>
         <div className='title-text'>{title}</div>
@@ -20,7 +20,7 @@ const DashboardBox = ({ userList, title, history, hiddenDelete, submit }) => (
             <CustomButton 
               addNewButton 
               onClick={() => {
-              history.push('/add-user')
+              history.push('dashboard-exe/add-user')
             }}
             >
               Add new

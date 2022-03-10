@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import FormInput from '../form-input/form-input.component.jsx';
 import CustomButton from '../custom-button/custom-button.component.jsx'; 
@@ -39,6 +40,8 @@ class AddUserForm extends Component {
   };
 
   render(){
+    
+
     return(
       <div className='add-user-box'>
 
@@ -50,7 +53,7 @@ class AddUserForm extends Component {
             label='name'
             value={this.state.name} 
             handleChange={this.handleChange}
-            required 
+
           />
           
           <FormInput 
@@ -59,13 +62,18 @@ class AddUserForm extends Component {
             label='email'
             value={this.state.email} 
             handleChange={this.handleChange}
-            required 
+
           />
 
 
 
           <div className='user-list-footer'>
-            <CustomButton deleteButton >
+            <CustomButton 
+              deleteButton 
+              onClick={() => {
+                this.props.history.push('dashboard-exe/')
+              }}
+            >
               Cancel
             </CustomButton>
 

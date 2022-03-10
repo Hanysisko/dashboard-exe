@@ -27,10 +27,10 @@ class App extends Component {
         <Switch>
 
           <Route exact path={'/dashboard-exe'} component={ HomePage }>
-            <Redirect to={'/'}/>
+            {/* <Redirect to={'/'}/> */}
           </Route>
-          <Route exact path={'/'} component={ HomePage }/>
-          <Route exact path={'/add-user'} component={ AddUserPage }/>
+          {/* <Route exact path={'/'} component={ HomePage }/> */}
+          <Route exact path={'/dashboard-exe/add-user'} component={ AddUserPage }/>
 
         </Switch>
       </div>
