@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import UserList from '../user-list/user-list.component.jsx'
 
+import UserList from '../user-list/user-list.component.jsx'
+import AddUser from '../add-user/add-user.component.jsx';
 import CustomButton from '../custom-button/custom-button.component.jsx';
 
 import './dashboard-box.styles.scss';
@@ -26,11 +27,18 @@ const DashboardBox = ({ userList, title, history }) => (
             <span></span>
           )
         }
-        
+
       </div>
       <div className='border-bottom'/>
 
-      <UserList/>
+        {
+          userList ? 
+          (
+            <UserList/>
+          ) : (
+            <AddUser/>
+          )
+        }
 
   </div>
 );
